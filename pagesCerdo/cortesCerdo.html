@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cerdo</title>
+    <link rel="icon" href="../img/logo.png" type="image/png">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <h1>
+        <a href="/index.html">
+            <img src="/img/logo.png" alt="Logo" class="logo">
+            Portal de Carnes
+        </a>
+    </h1>
+    <div class="menu">
+        <button onclick="window.location.href='/pagesTernera/ternera.html'">Ternera</button>
+        <button onclick="window.location.href='cerdo.html'">Cerdo</button>
+        <button onclick="window.location.href='/pagesPollo/pollo.html'">Pollo</button>
+        <button onclick="window.location.href='/pagesEmbutidos/embutidos.html'">Embutidos</button>
+        <button onclick="window.location.href='/pagesAlmacen/almacen.html'">Almacén</button>
+    </div>
+    <div class="button-container menu">
+        <button onclick="window.location.href='cortesCerdo.html'" class="btn">Cortes de Cerdo</button>
+    </div>
+    
+    
+        <!-- Tabla de Cortes -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Cortes</th>
+                    <th>Kilos</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+                <tr data-corte="paleta-cerdo">
+                    <td>Paleta de Cerdo</td>
+                    <td>
+                        <button onclick="changeKilos('paleta-cerdo', -1)">-</button>
+                        <input type="number" class="input-kilos" id="kilos-paleta-cerdo" value="0">
+                        <button onclick="changeKilos('paleta-cerdo', 1)">+</button>
+                    </td>
+                    <td id="total-paleta-cerdo">0</td>
+                </tr>
+                <tr data-corte="paleta-cerdo-sc">
+                    <td>Paleta de Cerdo S/C</td>
+                    <td>
+                        <button onclick="changeKilos('paleta-cerdo-sc', -1)">-</button>
+                        <input type="number" class="input-kilos" id="kilos-paleta-cerdo-sc" value="0">
+                        <button onclick="changeKilos('paleta-cerdo-sc', 1)">+</button>
+                    </td>
+                    <td id="total-paleta-cerdo-sc">0</td>
+                </tr>
+                <tr data-corte="pierna-cerdo">
+                    <td>Pierna de Cerdo</td>
+                    <td>
+                        <button onclick="changeKilos('pierna-cerdo', -1)">-</button>
+                        <input type="number" class="input-kilos" id="kilos-pierna-cerdo" value="0">
+                        <button onclick="changeKilos('pierna-cerdo', 1)">+</button>
+                    </td>
+                    <td id="total-pierna-cerdo">0</td>
+                </tr>
+                <tr data-corte="pierna-cerdo-sc">
+                    <td>Pierna de Cerdo S/C</td>
+                    <td>
+                        <button onclick="changeKilos('pierna-cerdo-sc', -1)">-</button>
+                        <input type="number" class="input-kilos" id="kilos-pierna-cerdo-sc" value="0">
+                        <button onclick="changeKilos('pierna-cerdo-sc', 1)">+</button>
+                    </td>
+                    <td id="total-pierna-cerdo-sc">0</td>
+                </tr>
+                <tr data-corte="pulpa-cerdo">
+                    <td>Pulpa de Cerdo</td>
+                    <td>
+                        <button onclick="changeKilos('pulpa-cerdo', -1)">-</button>
+                        <input type="number" class="input-kilos" id="kilos-pulpa-cerdo" value="0">
+                        <button onclick="changeKilos('pulpa-cerdo', 1)">+</button>
+                    </td>
+                    <td id="total-pulpa-cerdo">0</td>
+                </tr>
+                <tr data-corte="pechito-cerdo">
+                    <td>Pechito</td>
+                    <td>
+                        <button onclick="changeKilos('pechito-cerdo', -1)">-</button>
+                        <input type="number" class="input-kilos" id="kilos-pechito-cerdo" value="0">
+                        <button onclick="changeKilos('pechito-cerdo', 1)">+</button>
+                    </td>
+                    <td id="total-pechito-cerdo">0</td>
+                </tr>
+                <tr data-corte="carre-cerdo">
+                    <td>Carre de Cerdo</td>
+                    <td>
+                        <button onclick="changeKilos('carre-cerdo', -1)">-</button>
+                        <input type="number" class="input-kilos" id="kilos-carre-cerdo" value="0">
+                        <button onclick="changeKilos('carre-cerdo', 1)">+</button>
+                    </td>
+                    <td id="total-carre-cerdo">0</td>
+                </tr>
+                <tr data-corte="bondiola-cerdo">
+                    <td>Bondiola </td>
+                    <td>
+                        <button onclick="changeKilos('bondiola-cerdo', -1)">-</button>
+                        <input type="number" class="input-kilos" id="kilos-bondiola-cerdo" value="0">
+                        <button onclick="changeKilos('bondiola-cerdo', 1)">+</button>
+                    </td>
+                    <td id="total-bondiola-cerdo">0</td>
+                </tr>
+                <tr data-corte="bondiola-cerdo-ch">
+                    <td>Bondiola C/H</td>
+                    <td>
+                        <button onclick="changeKilos('bondiola-cerdo-ch', -1)">-</button>
+                        <input type="number" class="input-kilos" id="kilos-bondiola-cerdo-ch" value="0">
+                        <button onclick="changeKilos('bondiola-cerdo-ch', 1)">+</button>
+                    </td>
+                    <td id="total-bondiola-cerdo-ch">0</td>
+                </tr>
+                <tr data-corte="matambre-cerdo">
+                    <td>Matambre de Cerdo</td>
+                    <td>
+                        <button onclick="changeKilos('matambre-cerdo', -1)">-</button>
+                        <input type="number" class="input-kilos" id="kilos-matambre-cerdo" value="0">
+                        <button onclick="changeKilos('matambre-cerdo', 1)">+</button>
+                    </td>
+                    <td id="total-matambre-cerdo">0</td>
+                </tr>
+                <tr data-corte="solomillo">
+                    <td>Solomillo</td>
+                    <td>
+                        <button onclick="changeKilos('solomillo', -1)">-</button>
+                        <input type="number" class="input-kilos" id="kilos-solomillo" value="0">
+                        <button onclick="changeKilos('solomillo', 1)">+</button>
+                    </td>
+                    <td id="total-solomillo">0</td>
+                </tr>
+                <tr data-corte="osobuco-cerdo">
+                    <td>Osobuco de Cerdo</td>
+                    <td>
+                        <button onclick="changeKilos('osobuco-cerdo', -1)">-</button>
+                        <input type="number" class="input-kilos" id="kilos-osobuco-cerdo" value="0">
+                        <button onclick="changeKilos('osobuco-cerdo', 1)">+</button>
+                    </td>
+                    <td id="total-osobuco-cerdo">0</td>
+                </tr>
+            </tbody>
+        </table>
+    
+        <div class="button-container">
+            <button class="btn-save" onclick="saveData()">Guardar Datos</button>
+            <button class="btn-download" onclick="downloadTextFile()">Descargar Archivo</button>
+            <button class="btn-reset" onclick="resetAll()">Eliminar Datos</button> <!-- Nuevo botón -->
+        </div>
+    
+        <div id="confirmation-message"></div>
+    
+        <script src="/script.js"></script> <!-- Ruta al archivo JS -->
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Económicos</title>
+    <link rel="icon" href="../img/logo.png" type="image/png">
+    <link rel="stylesheet" href="../styles.css"> <!-- Ruta al archivo CSS -->
+</head>
+<body>
+    <h1>
+        <a href="../index.html">
+            <img src="/img/logo.png" alt="Logo" class="logo">
+            Portal de Carnes
+        </a>
+    </h1>
+    <div class="menu">
+        <button onclick="window.location.href='/pagesTernera/ternera.html'">Ternera</button>
+        <button onclick="window.location.href='/pagesCerdo/cerdo.html'">Cerdo</button>
+        <button onclick="window.location.href='/pagesPollo/pollo.html'">Pollo</button>
+        <button onclick="window.location.href='/pagesEmbutidos/embutidos.html'">Embutidos</button>
+        <button onclick="window.location.href='/pagesAlmacen/almacen.html'">Almacén</button>
+    </div>
+    
+    <div class="button-container menu">
+        <button onclick="window.location.href='/pagesTernera/pulpaTernera.html'" class="btn">Pulpa Ternera</button>
+        <button onclick="window.location.href='../pagesTernera/economicosTernera.html'" class="btn">Económicos Ternera</button>
+        <button onclick="window.location.href='../pagesTernera/asadoTernera.html'"class="btn">Asado Ternera</button>
+        <button onclick="window.location.href='../pagesTernera/piezaTernera.html'"class="btn">Ternera Por Pieza</button>
+    </div>
+    
+    <!-- Tabla de Cortes -->
+    <table>
+        <thead>
+            <tr>
+                <th>Cortes</th>
+                <th>Kilos</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody id="table-body">
+            <tr data-corte="puchero">
+                <td>Puchero</td>
+                <td>
+                    <button onclick="changeKilos('puchero', -1)">-</button>
+                    <input type="number" class="input-kilos" id="kilos-puchero" value="0">
+                    <button onclick="changeKilos('puchero', 1)">+</button>
+                </td>
+                <td id="total-puchero">0</td>
+            </tr>
+            <tr data-corte="osobuco">
+                <td>Osobuco</td>
+                <td>
+                    <button onclick="changeKilos('osobuco', -1)">-</button>
+                    <input type="number" class="input-kilos" id="kilos-osobuco" value="0">
+                    <button onclick="changeKilos('osobuco', 1)">+</button>
+                </td>
+                <td id="total-osobuco">0</td>
+            </tr>
+            <tr data-corte="aguja">
+                <td>Aguja</td>
+                <td>
+                    <button onclick="changeKilos('aguja', -1)">-</button>
+                    <input type="number" class="input-kilos" id="kilos-aguja" value="0">
+                    <button onclick="changeKilos('aguja', 1)">+</button>
+                </td>
+                <td id="total-aguja">0</td>
+            </tr>
+            <tr data-corte="falda">
+                <td>Falda</td>
+                <td>
+                    <button onclick="changeKilos('falda', -1)">-</button>
+                    <input type="number" class="input-kilos" id="kilos-falda" value="0">
+                    <button onclick="changeKilos('falda', 1)">+</button>
+                </td>
+                <td id="total-falda">0</td>
+            </tr>
+            <tr data-corte="bocado-fino">
+                <td>Bocado Fino</td>
+                <td>
+                    <button onclick="changeKilos('bocado-fino', -1)">-</button>
+                    <input type="number" class="input-kilos" id="kilos-bocado-fino" value="0">
+                    <button onclick="changeKilos('bocado-fino', 1)">+</button>
+                </td>
+                <td id="total-bocado-fino">0</td>
+            </tr>
+            <tr data-corte="bocado-ancho">
+                <td>Bocado Ancho</td>
+                <td>
+                    <button onclick="changeKilos('bocado-ancho', -1)">-</button>
+                    <input type="number" class="input-kilos" id="kilos-bocado-ancho" value="0">
+                    <button onclick="changeKilos('bocado-ancho', 1)">+</button>
+                </td>
+                <td id="total-bocado-ancho">0</td>
+            </tr>
+            <tr data-corte="costeleta-redonda">
+                <td>Costeleta Redonda</td>
+                <td>
+                    <button onclick="changeKilos('costeleta-redonda', -1)">-</button>
+                    <input type="number" class="input-kilos" id="kilos-costeleta-redonda" value="0">
+                    <button onclick="changeKilos('costeleta-redonda', 1)">+</button>
+                </td>
+                <td id="total-costeleta-redonda">0</td>
+            </tr>
+            <tr data-corte="costeleta-ancha">
+                <td>Costeleta Ancha</td>
+                <td>
+                    <button onclick="changeKilos('costeleta-ancha', -1)">-</button>
+                    <input type="number" class="input-kilos" id="kilos-costeleta-ancha" value="0">
+                    <button onclick="changeKilos('costeleta-ancha', 1)">+</button>
+                </td>
+                <td id="total-costeleta-ancha">0</td>
+            </tr>
+            <tr data-corte="molida-comun">
+                <td>Molida-Comun</td>
+                <td>
+                    <button onclick="changeKilos('molida-comun', -1)">-</button>
+                    <input type="number" class="input-kilos" id="kilos-molida-comun" value="0">
+                    <button onclick="changeKilos('molida-comun', 1)">+</button>
+                </td>
+                <td id="total-molida-comun">0</td>
+            </tr>
+            <tr data-corte="molida-especial">
+                <td>Molida Especial</td>
+                <td>
+                    <button onclick="changeKilos('molida-especial', -1)">-</button>
+                    <input type="number" class="input-kilos" id="kilos-molida-especial" value="0">
+                    <button onclick="changeKilos('molida-especial', 1)">+</button>
+                </td>
+                <td id="total-molida-especial">0</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="button-guardar-eliminar-descargar" >
+        <div class="button-container">
+            <button class="btn-save" onclick="saveData()">Guardar Datos</button>
+            <button class="btn-download" onclick="downloadTextFile()">Descargar Archivo</button>
+            <button class="btn-reset" onclick="resetAll()">Eliminar Datos</button> <!-- Nuevo botón -->
+        </div>
+    </div>
+
+    <div id="confirmation-message"></div>
+
+    <script src="../script.js"></script> <!-- Ruta al archivo JS -->
+</body>
+</html>

@@ -1,0 +1,178 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: whitesmoke;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    overflow:auto;
+}
+
+h1 {
+    margin: 20px 0;
+    font-size: 24px; /* Ajusta el tamaño del texto si es necesario */
+}
+
+h1 a {
+    color: whitesmoke; /* Color blanco para el texto del enlace */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+}
+
+h1 a:hover {
+    text-decoration: underline; /* Opcional: agrega subrayado al pasar el ratón sobre el enlace */
+}
+
+.logo {
+    width: 80px; /* Ajusta el tamaño del logo */
+    height: auto;
+    vertical-align: middle; /* Alinea el logo con el texto */
+    margin-right: 1rem; /* Espacio entre el logo y el texto */
+}
+
+.menu {
+    margin: 20px 0;
+}
+
+.menu button {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.menu button:hover {
+    background-color: #286496;
+}
+
+.button-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.button-guardar-eliminar-descargar{
+    margin-bottom: 3rem;
+}
+
+/* Estilo general para los botones en button-container */
+.button-container button {
+    background-color: #f0f0f0;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-bottom: 1rem; /* Espaciado entre botones */
+}
+
+/* Estilo para el botón "Guardar Datos" */
+.btn-save {
+    background-color: #4CAF50; /* Verde */
+}
+
+.btn-save:hover {
+    background-color: #45a049; /* Verde más oscuro para hover */
+}
+
+/* Estilo para el botón "Descargar Archivo" */
+.btn-download {
+    background-color: #00BFFF; /* Celeste */
+}
+
+.btn-download:hover {
+    background-color: #1e90ff; /* Celeste más oscuro para hover */
+}
+
+/* Estilo para el botón "Eliminar Datos" */
+.btn-reset {
+    background-color: #FF6347; /* Rojo tomate */
+}
+
+.btn-reset:hover {
+    background-color: #e55347; /* Rojo tomate más oscuro para hover */
+}
+
+/* Estilos para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+.input-kilos {
+    width: 80px;
+}
+
+/* Mensaje de confirmación */
+#confirmation-message {
+    display: none;
+    background-color: #4CAF50; /* Verde */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+
+/* Estilo fijo para los botones en la parte inferior */
+.fixed-buttons {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    border-top: 1px solid #ccc;
+}
+
+/* Asegura que el contenido principal se ajuste correctamente */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Estilos para el contenedor de botones */
+.button-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+    .button-container button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .logo {
+        width: 60px; /* Ajusta el tamaño del logo en pantallas pequeñas */
+    }
+}
